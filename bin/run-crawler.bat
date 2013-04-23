@@ -1,0 +1,1 @@
+%CD%\bin\node.exe crawler.js

@@ -1,7 +1,7 @@
 Crawler
 =======
 
-Goal: Build a web crawler using PHP.  
+Goal: Build a web crawler using node.js.  
 
 This crawler is given as an assigment in the RMIT course [COSC1165 Intelligent Web Systems](http://www.rmit.com/courses/004170)
 
