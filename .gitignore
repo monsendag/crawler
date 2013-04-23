@@ -1,1 +1,8 @@
+# crawled data
+data/crawled/**
 
+# npm modules for now
+node_modules/**
+
+# vim cache
+*.swp
