@@ -1,7 +1,7 @@
 Crawler
 =======
 
-Goal: Build a web crawler using Python, and get fluent in the language.  
+Goal: Build a web crawler using PHP.  
 
 This crawler is given as an assigment in the RMIT course [COSC1165 Intelligent Web Systems](http://www.rmit.com/courses/004170)
 
