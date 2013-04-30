@@ -1,0 +1,3 @@
+[submodule "node_modules/node-arff"]
+	path = node_modules/node-arff
+	url = git@github.com:monsendag/node-arff.git
