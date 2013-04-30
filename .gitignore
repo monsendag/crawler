@@ -1,5 +1,5 @@
 # crawled data
-data/crawled/**
+saved-pages/**
 
 # npm modules for now
 node_modules/**
