@@ -1,20 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --debug
 var program = require('commander');
 var _ = require('underscore');
-
-program
-  .version('0.0.1')
-  .usage('[options] <seed-url>')
-  .option('-p, --politeness <n>', 'The politeness of the crawler', parseInt, 10)
-  .option('-m, --maxpages <n>', 'The maximum page limit for the crawler', parseInt, 20)
-  .parse(process.argv);
-
-
-if(!program.args.length > 0) {
-  console.log(program.help());
-  return;
-}
-
 var requirejs = require('requirejs');
 
 requirejs.config({
@@ -22,15 +8,26 @@ requirejs.config({
   nodeRequire: require
 });
 
+program
+  .version('0.0.1')
+  .usage('[options] <seed-url>')
+  .option('-p, --politeness <seconds>', 'The politeness of the crawler', parseInt)
+  .option('-m, --maxpages <pages>', 'The maximum page limit for the crawler', parseInt)
+  .option('-m, --limithost <boolean>', 'Whether to limit crawling to the same hostname', Boolean)
+  .parse(process.argv);
+
+if(!program.args.length > 0) {
+  program.help();
+}
+
 requirejs(['Utility'], function(Utility) {
   Utility(global);
+
   requirejs(['Crawler'], function (Crawler) {
 
-    var params = _.pick(program, 'politeness', 'maxpages');
-    var url = _.first(program.args);
+    var params = _.pick(program, 'politeness', 'maxpages', 'limithost');
+    var seed = _.first(program.args);
 
-    var crawler = new Crawler(params);
-
-    crawler.crawl(url);
+    new Crawler(params).crawl(seed);
   })
 });
