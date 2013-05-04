@@ -1,15 +1,10 @@
-Crawler
+fireleg
 =======
 
-Goal: Build a web crawler using node.js.  
+A node.js based web crawler.
 
 This crawler is given as an assigment in the RMIT course [COSC1165 Intelligent Web Systems](http://www.rmit.com/courses/004170)
 
-* Polite: Won't flood servers.
-* Efficient: Multithreaded to keep a good throughput when being polite to servers.
+* Polite: Supports robots.txt and meta/rel markup. Won't flood servers.
 * Robust: Handles multiple crawler traps.
-* Selective: Can not crawl the whole web. 
-
-### Tradeoffs
-*  BFS vs DFS?
-
+* Selective: Limit to a certain host or subpath on that host.
