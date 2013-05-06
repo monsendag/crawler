@@ -15,6 +15,7 @@ program
   .option('-m, --limitpath', 'Whether to limit crawling to the path')
   .parse(process.argv);
 
+
 if (!program.args.length > 0) {
   program.help();
 }
