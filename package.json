@@ -1,0 +1,26 @@
+{
+  "name": "fireleg",
+  "description": "A web crawler based on node js.",
+  "version": "0.1.0",
+  "homepage": "http://github.com/monsendag/fireleg",
+  "repository": "git://github.com/monsendag/fireleg.git",
+  "author": "Dag Einar Monsen <me@dag.im>",
+  "main": "./lib/Crawler",
+
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha",
+    "crawl": "./crawl"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/monsendag/fireleg/raw/master/LICENSE"
+    }
+  ]
+}
